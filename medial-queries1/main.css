@@ -1,3 +1,52 @@
 body {
   background: blanchedalmond;
 }
+
+.a {
+  background: magenta;
+  min-height: 10em;
+  min-width: 100%;
+}
+
+.b {
+  background: blue;
+  min-height: 15em;
+  width: 59%;
+}
+
+.c {
+  background-color: greenyellow;
+  min-height: 18%;
+  width: 39%;
+}
+
+.a,
+.b,
+.c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .b,
+  .c {
+    width: 100%;
+  }
+  .a,
+  .c {
+    min-height: 5em;
+  }
+}
